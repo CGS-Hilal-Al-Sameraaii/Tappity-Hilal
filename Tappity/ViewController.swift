@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         self.view.backgroundColor = colors[Int(arc4random_uniform(UInt32(colors.count)))]
     }
     
+    func coolFeatureTesting() {
+        print("hey hilla just testing this new cool feature")
+    }
+    
     func countDown() {
         timeValue -= 1
         time.text = String(timeValue)
@@ -43,7 +47,7 @@ class ViewController: UIViewController {
         } else {
             gameRunning = false
             
-            let gameOver = UIAlertController(title: "Game Over", message: "Your score was \(scoreValue)", preferredStyle: UIAlertControllerStyle.actionSheet)
+            let gameOver = UIAlertController(title: "Game Over", message: "Your score is: \(scoreValue)", preferredStyle: UIAlertControllerStyle.actionSheet)
             gameOver.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
             present(gameOver, animated: true)
         }
